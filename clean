@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+source env/bin/activate
+
+# path to django directory
+project_dir="."
+
+echo "Removed Database"
+rm -f $project_dir/db.sqlite3
+echo "Removed Migrations"
+rm -r $project_dir/*/migrations
+
+python "$project_dir/manage.py" makemigrations blog
+python "$project_dir/manage.py" migrate
+
