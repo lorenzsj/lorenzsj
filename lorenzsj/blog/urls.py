@@ -1,23 +1,16 @@
 from django.urls import path
-from django.conf.urls import include
+from django.urls import include
 
-from rest_framework.urlpatterns import format_suffix_patterns
+from rest_framework.routers import DefaultRouter
 
 from blog import views
 
-urlpatterns = format_suffix_patterns([
-    path('', views.api_root),
-    path('api-auth/', include('rest_framework.urls')),
-    path('api/blog/',
-        views.PostList.as_view(),
-        name='post-list'),
-    path('api/blog/<int:pk>/',
-        views.PostDetail.as_view(),
-        name='post-detail'),
-    path('api/users/', # TODO: Put user definitions in a global app
-        views.UserList.as_view(),
-        name='user-list'),
-    path('api/users/<int:pk>/', # TODO: Put user definitions in a global app
-        views.UserDetail.as_view(),
-        name='user-detail')
-])
+# Create a router and register our viewsets with it.
+router = DefaultRouter()
+router.register(r'blog', views.PostViewSet)
+router.register(r'users', views.UserViewSet)
+
+# The API URLs are now determined automatically by the router.
+urlpatterns = [
+    path('', include(router.urls)),
+]
