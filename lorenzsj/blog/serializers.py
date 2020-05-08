@@ -12,7 +12,6 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = (
-            'url',
             'id',
             'username',
             'blog',
@@ -25,9 +24,10 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = (
-            'url',
             'id',
             'title',
             'author',
             'content',
+            'created_at',
+            'updated_at',
         )

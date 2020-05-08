@@ -17,8 +17,7 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    """
-    This viewset automatically provides `list`, `create`, `retrieve`,
+    """This viewset automatically provides `list`, `create`, `retrieve`,
     `update` and `destroy` actions.
     """
     queryset = Post.objects.all()
