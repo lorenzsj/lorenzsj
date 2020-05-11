@@ -1,0 +1,18 @@
+[
+    {
+      id: 1,
+      title: "Hello, World!",
+      author: "Stephen Lorenz",
+      content: "A great article.",
+      created_at: "05/11/2020 3:14 PM",
+      updated_at: "05/11/2020 4:19 PM"
+    },
+    {
+      id: 1,
+      title: "Howdy, World!",
+      author: "Stephen Lorenz",
+      content: "Yet another great article.",
+      created_at: "05/11/2020 3:22 PM",
+      updated_at: "05/11/2020 4:21 PM"
+    }
+]
