@@ -14,8 +14,8 @@ function Blog(props) {
             <div className="col-sm-auto">
               <h5><a className="text-dark" href="#">{props.title}</a></h5>
             </div>
-            {/* Card Badge */}
-            <div className="col-sm-auto ml-auto">
+            {/* Card Badge */} 
+            <div className="col-sm-auto ml-auto"> {/* FIXME: does not correctly respond to mobile scaling */}
               <h5><span className="badge badge-primary">{props.badge}</span></h5>
             </div>
           </div>
