@@ -7,7 +7,7 @@ import './Hero.scss';
 
 function Hero() {
   return (
-    <Jumbotron>
+    <Jumbotron className="mb-0">
       <div className="container">
         <h1>Hello, world!</h1>
         <p>

@@ -6,6 +6,8 @@ import Services from './Services';
 import Blog from './Blog';
 import Footer from './Footer';
 
+import './App.scss';
+
 function App() {
   return (
     <div>
