@@ -2,20 +2,18 @@ import React, { useState } from 'react';
 
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
+
+import LoginModal from './LoginModal';
 
 import './NavigationBar.scss';
 
 function NavigationBar() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [modalShow, setModalShow] = useState(false);
 
   // TODO: the modal-fix solution isn't the best, better off trying to put the modal in it's section
   return (
-      <Navbar className="modal-fix" collapseOnSelect expand="sm" bg="light" variant="light" sticky="top">
+      <Navbar className="modal-fix shadow-sm" collapseOnSelect expand="sm" bg="light" variant="light" sticky="top">
         <div className="container">
           <Navbar.Brand href="#home">lorenzsj.io</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
@@ -30,24 +28,14 @@ function NavigationBar() {
             <Nav>
               {/* TODO: Move this into the LoginModal component */}
               <Nav.Link href="#login">
-                <Button variant="primary" onClick={handleShow}>
+                <Button variant="primary" onClick={() => setModalShow(true)}>
                   Login
                 </Button>
+                <LoginModal
+                  show={modalShow}
+                  onHide={() => setModalShow(false)}
+                />
               </Nav.Link>
-              <Modal show={show} onHide={handleClose}>
-                <Modal.Header closeButton>
-                  <Modal.Title>Login</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-                <Modal.Footer>
-                  <Button variant="secondary" onClick={handleClose}>
-                    Close
-                  </Button>
-                  <Button variant="primary" onClick={handleClose}>
-                    Save Changes
-                  </Button>
-                </Modal.Footer>
-              </Modal>
             </Nav>
           </Navbar.Collapse>
         </div>
