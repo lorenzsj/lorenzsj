@@ -3,6 +3,7 @@ import React from 'react';
 import NavigationBar from './NavigationBar';
 import Hero from './Hero';
 import Services from './Services';
+import Blog from './Blog';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <NavigationBar />
       <Hero />
       <Services />
+      <Blog />
     </div>
   );
 }

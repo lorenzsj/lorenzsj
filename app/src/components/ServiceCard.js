@@ -7,6 +7,7 @@ function ServiceCard(props) {
       <div className="row services-header">
         {/* Service Icon */}
         <div className="col-sm-auto pr-0"> {/* FIXME: Issue with responsiveness */}
+          {/* FIXME: plain svg tag doesn't work w/ react */}
           {/*<svg className="lnr text-primary services-icon">
             <use xlink:href="#lnr-screen"></use>
           </svg>*/}

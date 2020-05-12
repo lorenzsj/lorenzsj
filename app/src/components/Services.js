@@ -19,17 +19,19 @@ const cards = [
 
 function Services() {
   return (
-    <div className="container">
-      <h2>What I Can Do For You</h2>
-      <p className="lead text-muted mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
-      <div className="row">
-        {
-          cards.map(function(c) {
-            return <ServiceCard title={c.title} description={c.description} />;
-          })
-        }
+    <section>
+      <div className="container">
+        <h2>What I Can Do For You</h2>
+        <p className="lead text-muted mb-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+        <div className="row">
+          {
+            cards.map(function(c) {
+              return <ServiceCard title={c.title} description={c.description} />;
+            })
+          }
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
