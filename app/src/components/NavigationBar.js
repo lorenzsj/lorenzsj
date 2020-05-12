@@ -5,14 +5,17 @@ import Navbar from 'react-bootstrap/Navbar';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
+import './NavigationBar.scss';
+
 function NavigationBar() {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // TODO: the modal-fix solution isn't the best, better off trying to put the modal in it's section
   return (
-      <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
+      <Navbar className="modal-fix" collapseOnSelect expand="sm" bg="light" variant="light" sticky="top">
         <div className="container">
           <Navbar.Brand href="#home">lorenzsj.io</Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav"/>

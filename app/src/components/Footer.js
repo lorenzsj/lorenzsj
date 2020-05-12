@@ -1,63 +1,77 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faRssSquare } from '@fortawesome/free-solid-svg-icons';
+
+import './Footer.scss';
+
 const socialMedia = [
   {
-    imageName: "fab fa-github",
+    icon: faGithub,
     url: "#"
   },
   {
-    imageName: "fab fa-linkedin",
+    icon: faLinkedin,
     url: "#"
   },
   {
-    imageName: "fab fa-stack-overflow",
+    icon: faStackOverflow,
     url: "#"
   },
   {
-    imageName: "fab fa-twitter",
+    icon: faTwitter,
     url: "#"
   },
   {
-    imageName: "fas fa-rss-square",
+    icon: faRssSquare,
     url: "#"
   },
 ]
 
 function Footer() {
   return (
-    <div className="py-4 bg-dark">
+    <div className="py-4 bg-light"> {/* TODO: Change back to bg-dark later}
       {/* Social Media Section */}
       <div className="container">
         <div className="row d-flex justify-content-center mb-3">
           <ul className="list-inline">
-            <li className="list-inline-item mr-4">
-              {
-                socialMedia.map(function(l) {
-                  return <a href="{l.url}" className="text-dark"><i className="{l.imageName} fa-3x"></i></a>;
-                })
-              }
-            </li>
+            {
+              socialMedia.map(function(sm) {
+                return (
+                  <li class="list-inline-item mr-4-not-last">
+                    <a href={sm.url}>
+                      <FontAwesomeIcon icon={sm.icon} size="3x"/>
+                    </a>
+                  </li>
+                );
+              })
+            }
           </ul>
         </div>
-      </div>
-      {/* Copyright Section */}
-      <div class="bg-dark text-dark">
-        <div class="row d-flex justify-content-center">
-          <ul class="list-inline">
-            <li class="list-inline-item">
-              <a href="#" class="text-dark">Site Map</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-dark">Privacy Policy</a>
-            </li>
-            <li class="list-inline-item">
-              <a href="#" class="text-dark">Terms of Service</a>
-            </li>
-          </ul>
+        {/* Copyright Section */}
+        <div class="text-dark bg-light">
+          <div class="row d-flex justify-content-center">
+            <ul class="list-inline">
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">Site Map</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">Privacy Policy</a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="text-dark">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+          <p class="text-center mb-md-0">&copy; 2020 Stephen Lorenz. All rights reserved.</p>
         </div>
-        <p class="text-center mb-md-0">&copy; 2020 Stephen Lorenz. All rights reserved.</p>
       </div>
-    </div>
+   </div>
   );
 }
 
