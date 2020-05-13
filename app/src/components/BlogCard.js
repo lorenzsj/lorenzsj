@@ -2,7 +2,9 @@ import React from 'react';
 
 function Blog(props) {
   return (
-    <div className="col-md-4 mb-4">
+    <div className="col-lg-4 col-md-6 mb-4">
+      {/* FIXME: Slightly improved responsiveness for tablet, badge still has issues */}
+      {/* TODO: try tweaking column sizes to accomodate the badge, potentially put badge in top right corner */}
       {/* Card Image */}
       <div className="card shadow-sm border-0 h-100">
         <a href="#">
@@ -11,11 +13,11 @@ function Blog(props) {
         <div className="card-body p-3">
           <div className="row mb-2">
             {/* Card Title */}
-            <div className="col-sm-auto">
+            <div className="col-auto">
               <h5><a className="text-dark" href="#">{props.title}</a></h5>
             </div>
             {/* Card Badge */} 
-            <div className="col-sm-auto ml-auto"> {/* FIXME: does not correctly respond to mobile scaling */}
+            <div className="col-auto ml-auto">
               <h5><span className="badge badge-primary">{props.badge}</span></h5>
             </div>
           </div>
