@@ -10,11 +10,11 @@ function ServiceCard(props) {
       {/* Service Header */}
       <div className="row mb-2">
         {/* Service Icon */}
-        <div className="col-sm-auto pr-0"> {/* FIXME: Issue with responsiveness */}
+        <div className="col-auto pr-0">
           <FontAwesomeIcon icon={props.icon} size="2x"/>
         </div>
         {/* Service Name */}
-        <div className="d-flex col-sm-auto align-items-center">
+        <div className="d-flex col-auto align-items-center">
           <h6 className="mb-0">{props.title}</h6>
         </div>
       </div>

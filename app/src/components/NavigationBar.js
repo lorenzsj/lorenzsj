@@ -12,6 +12,7 @@ function NavigationBar() {
   const [modalShow, setModalShow] = useState(false);
 
   // TODO: the modal-fix solution isn't the best, better off trying to put the modal in it's section
+  // FIXME: nav bar instantly disappears instead of collapase when opening modal
   return (
       <Navbar className="modal-fix shadow-sm" collapseOnSelect expand="sm" bg="light" variant="light" sticky="top">
         <div className="container">
@@ -26,7 +27,6 @@ function NavigationBar() {
               <Nav.Link href="#contact">Contact</Nav.Link>
             </Nav>
             <Nav>
-              {/* TODO: Move this into the LoginModal component */}
               <Nav.Link href="#login">
                 <Button variant="primary" onClick={() => setModalShow(true)}>
                   Login
