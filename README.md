@@ -12,3 +12,4 @@ In no particular order for now:
 7. Integrate Jenkins service w/ React app and django backend
 8. Dockerize the app
 9. Cleanup package.json
+10. Attend to TODOs and FIXMEs
