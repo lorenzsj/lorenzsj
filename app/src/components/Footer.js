@@ -6,7 +6,7 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faRssSquare } from '@fortawesome/free-solid-svg-icons';
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 import './Footer.scss';
 
@@ -28,7 +28,7 @@ const socialMedia = [
     url: "#"
   },
   {
-    icon: faRssSquare,
+    icon: faGraduationCap,
     url: "#"
   },
 ]

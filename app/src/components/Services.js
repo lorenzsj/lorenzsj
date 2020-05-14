@@ -2,9 +2,9 @@ import React from 'react';
 
 import ServiceCard from './ServiceCard';
 
-import { faLaptopCode} from '@fortawesome/free-solid-svg-icons';
-import { faFlask} from '@fortawesome/free-solid-svg-icons';
-import { faLock} from '@fortawesome/free-solid-svg-icons';
+import { faLaptopCode } from '@fortawesome/free-solid-svg-icons';
+import { faCloud } from '@fortawesome/free-solid-svg-icons';
+import { faFlask } from '@fortawesome/free-solid-svg-icons';
 
 const cards = [
   {
@@ -13,15 +13,16 @@ const cards = [
     description: "Ex cupidatat eu officia consequat incididunt labore occaecat ut veniam labore et cillum id et."
   },
   {
+    icon: faCloud,
+    title: "DevOps",
+    description: "Voluptate ex irure ipsum ipsum ullamco ipsum reprehenderit non ut mollit commodo.",
+  },
+  {
     icon: faFlask,
     title: "Research Assistant",
     description: "Tempor aute occaecat pariatur esse aute amet."
   },
-  {
-    icon: faLock,
-    title: "Expert Debugger",
-    description: "Voluptate ex irure ipsum ipsum ullamco ipsum reprehenderit non ut mollit commodo.",
-  }
+
 ];
 
 function Services() {

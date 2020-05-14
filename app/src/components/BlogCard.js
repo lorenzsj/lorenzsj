@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './BlogCard.scss';
+
 function Blog(props) {
   return (
     <div className="col-lg-4 col-md-6 mb-4">
@@ -9,6 +11,7 @@ function Blog(props) {
       <div className="card shadow-sm border-0 h-100">
         <a href="#">
           <img className="card-img-top" src={props.image} alt=""/>
+          <h5><span className="badge badge-primary badge-float-tr m-2">{props.badge}</span></h5>
         </a>
         <div className="card-body p-3">
           <div className="row mb-2">
@@ -18,7 +21,7 @@ function Blog(props) {
             </div>
             {/* Card Badge */} 
             <div className="col-auto ml-auto">
-              <h5><span className="badge badge-primary">{props.badge}</span></h5>
+              
             </div>
           </div>
           {/* Card Description */}
