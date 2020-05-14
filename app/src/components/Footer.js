@@ -35,7 +35,7 @@ const socialMedia = [
 
 function Footer() {
   return (
-    <div className="py-4 bg-light"> {/* TODO: Change back to bg-dark later}
+    <footer className="py-4 bg-light"> {/* TODO: Change back to bg-dark later}
       {/* Social Media Section */}
       <div className="container">
         <div className="row d-flex justify-content-center mb-3">
@@ -71,7 +71,7 @@ function Footer() {
           <p class="text-center mb-md-0">&copy; 2020 Stephen Lorenz. All rights reserved.</p>
         </div>
       </div>
-   </div>
+   </footer>
   );
 }
 
