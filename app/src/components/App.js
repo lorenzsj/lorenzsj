@@ -1,22 +1,25 @@
 import React from 'react';
 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import NavigationBar from './NavigationBar';
-import Hero from './Hero';
-import Services from './Services';
-import Blog from './Blog';
 import Footer from './Footer';
+import Overview from './Overview';
+import Dashboard from './Dashboard';
 
 import './App.scss';
 
 function App() {
   return (
     <div>
-      <NavigationBar />
-      <Hero />
-      <Services />
-      <Blog />
-      <Footer />
-      <script src="https://kit.fontawesome.com/0d3f9979ff.js" crossorigin="anonymous"></script>
+      <Router>
+        <NavigationBar />
+        <Switch>
+          <Route path="/" exact component={Overview}/>
+          <Route path="/dashboard" component={Dashboard} />
+        </Switch>
+        <Footer />
+      </Router>
     </div>
   );
 }
