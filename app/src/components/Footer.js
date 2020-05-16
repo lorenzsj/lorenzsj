@@ -20,7 +20,7 @@ const socialMedia = [
     url: "#"
   },
   {
-    icon: faStackOverflow,
+    icon: faGraduationCap,
     url: "#"
   },
   {
@@ -28,14 +28,14 @@ const socialMedia = [
     url: "#"
   },
   {
-    icon: faGraduationCap,
+    icon: faStackOverflow,
     url: "#"
   },
 ]
 
 function Footer() {
   return (
-    <footer className="py-4 bg-light"> {/* TODO: Change back to bg-dark later}
+    <footer className="py-4 bg-dark"> {/* TODO: Change back to bg-dark later}
       {/* Social Media Section */}
       <div className="container">
         <div className="row d-flex justify-content-center mb-3">
@@ -54,21 +54,21 @@ function Footer() {
           </ul>
         </div>
         {/* Copyright Section */}
-        <div class="text-dark bg-light">
-          <div class="row d-flex justify-content-center">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#" class="text-dark">Site Map</a>
+        <div className="text-muted">
+          <div className="row d-flex justify-content-center">
+            <ul className="list-inline">
+              <li className="list-inline-item">
+                <a href="#">Site Map</a>
               </li>
-              <li class="list-inline-item">
-                <a href="#" class="text-dark">Privacy Policy</a>
+              <li className="list-inline-item">
+                <a href="#">Privacy Policy</a>
               </li>
-              <li class="list-inline-item">
-                <a href="#" class="text-dark">Terms of Service</a>
+              <li className="list-inline-item">
+                <a href="#">Terms of Service</a>
               </li>
             </ul>
           </div>
-          <p class="text-center mb-md-0">&copy; 2020 Stephen Lorenz. All rights reserved.</p>
+          <p className="text-center mb-md-0">&copy; 2020 Stephen Lorenz. All rights reserved.</p>
         </div>
       </div>
    </footer>

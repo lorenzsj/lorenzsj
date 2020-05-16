@@ -1,0 +1,19 @@
+.hero-bg {
+    color: #fff;
+    background-image: url("../img/buttons.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero-text-bg {
+    padding: 20px;
+
+    background-color: rgba(15, 15, 15, 0.70);
+    //background-image: linear-gradient(rgba(20, 20, 20, 0.50), rgba(25, 25, 25, 0.50), rgba(20, 20, 20, 0.50));
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+    /*filter: drop-shadow(0px 0px 5px rgba(20, 20, 24, 0.5)) ;*/
+  }

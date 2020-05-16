@@ -13,7 +13,7 @@ function Blog(props) {
           <img className="card-img-top" src={props.image} alt=""/>
           <h5><span className="badge badge-primary badge-float-tr m-2">{props.badge}</span></h5>
         </a>
-        <div className="card-body p-3">
+        <div className="card-body d-flex flex-column p-3">
           <div className="row mb-2">
             {/* Card Title */}
             <div className="col-auto">
@@ -26,7 +26,7 @@ function Blog(props) {
           </div>
           {/* Card Description */}
           <p className="text-muted card-text">{props.description}</p>
-          <p className="card-text mt-auto"><a href="#">Read more</a></p>
+          <p className="card-text mt-auto align-bottom"><a href="#">Read more</a></p>
         </div>
       </div>
     </div>

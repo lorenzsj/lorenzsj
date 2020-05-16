@@ -12,10 +12,10 @@ import macbook from '../img/macbook.png';
 /* TODO: Implement Hero text and image combo as a separate carousel component */
 function Hero() {
   return (
-    <Jumbotron fluid className="mb-0">
-      <div className="container">
-      <div className="d-flex row align-items-center">
-          <div className="col-lg-6 order-2 order-lg-1">
+    <Jumbotron fluid className="mb-0 hero-bg">
+      <div className="container ">
+        <div className="d-flex row align-items-center">
+          <div className="col-lg-6 order-2 order-lg-1 hero-text-bg shadow">
             <div>
               <h1 className="d-flex justify-content-center justify-content-lg-start">Like What You See?</h1>
               {/* TODO: maybe centering the text looks better? not sure atm */}
@@ -23,7 +23,7 @@ function Hero() {
               <p className="mb-0 d-flex justify-content-center justify-content-lg-start">
                 <Button className="mr-2 shadow" variant="primary">Hire Me</Button>
                 {/* TODO: style this a bit better */}
-                <SplitButton className="mr-2 shadow" title="My Resume" variant="outline-primary">
+                <SplitButton className="shadow-sm" title="My Resume" variant="outline-primary">
                   <Dropdown.Header>Save as</Dropdown.Header> {/* the header is .. smaller than the options haha */}
                   <Dropdown.Item eventKey="1">PDF</Dropdown.Item> {/* TODO: make hover same color as primary */}
                   <Dropdown.Item eventKey="2">DocX</Dropdown.Item>
