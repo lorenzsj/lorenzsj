@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Button from 'react-bootstrap/Button';
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import BlogCard from '../components/BlogCard';
 
@@ -36,6 +38,14 @@ function Blog() {
       <div className="container">
         <h2>Blog</h2>
         <p className="lead text-muted mb-5">Here are the things I am currently talking about</p>
+        <div className="row mb-2">
+          <div className="col">
+            <DropdownButton title="Filter">
+              <Dropdown.Item active>New</Dropdown.Item>
+              <Dropdown.Item>Hot</Dropdown.Item>
+            </DropdownButton>
+          </div>
+        </div>
         <div className="row">
           {
             cards.map(function(c) {
@@ -44,7 +54,7 @@ function Blog() {
           }
         </div>
         <div className="text-center">
-          <Button>See More</Button>
+          <Button>Read More</Button>
         </div>
       </div>
     </section>
