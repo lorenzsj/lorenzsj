@@ -9,7 +9,7 @@ import Button from 'react-bootstrap/Button';
 
 import LoginModal from './LoginModal';
 
-import './NavigationBar.scss';
+import '../scss/NavigationBar.scss';
 
 function NavigationBar() {
   const [modalShow, setModalShow] = useState(false);
@@ -24,10 +24,7 @@ function NavigationBar() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-              <Nav.Link as={NavLink} to="404">About</Nav.Link>
-              <Nav.Link href="#blog">Blog</Nav.Link>
-              <Nav.Link href="#portfolio">Portfolio</Nav.Link>
-              <Nav.Link href="/dashboard">Contact</Nav.Link>
+              <Nav.Link as={NavLink} to="/blog">Blog</Nav.Link>
               <Nav.Link as={NavLink} to="/dashboard">Dashboard</Nav.Link>
             </Nav>
             <Nav>

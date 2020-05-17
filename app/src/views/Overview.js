@@ -2,9 +2,9 @@ import React from 'react';
 
 import { Helmet } from "react-helmet";
 
-import Hero from './Hero';
-import Services from './Services';
-import Blog from './Blog';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import Blog from '../components/Blog';
 
 function Overview() {
   return (
@@ -12,9 +12,9 @@ function Overview() {
       <Helmet>
         <title>Home - lorenzsj.io</title>
       </Helmet>
-      <Hero/>
-      <Services/>
-      <Blog/>
+      <Hero />
+      <Services />
+      <Blog />
     </div>
   );
 }

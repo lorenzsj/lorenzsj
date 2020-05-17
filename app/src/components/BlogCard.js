@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './BlogCard.scss';
+import '../scss/BlogCard.scss';
 
 function Blog(props) {
   return (

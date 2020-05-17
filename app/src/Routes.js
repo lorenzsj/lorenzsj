@@ -2,10 +2,11 @@ import React from 'react';
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import NavigationBar from './NavigationBar';
-import Footer from './Footer';
-import Overview from './Overview';
-import Dashboard from './Dashboard';
+import NavigationBar from './components/NavigationBar';
+import Footer from './components/Footer';
+import Overview from './views/Overview';
+import Dashboard from './views/Dashboard';
+import Blog from './views/Blog';
 
 function Routes() {
   return (
@@ -31,7 +32,8 @@ function PublicRoutes(props) {
   return (
     <div>
       <Switch>
-        <Route path="/" exact component={Overview}/>
+        <Route path="/" exact component={Overview} />
+        <Route path="/blog" component={Blog} />
       </Switch>
       <Footer />
     </div>

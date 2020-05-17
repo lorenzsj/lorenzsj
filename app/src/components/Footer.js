@@ -8,7 +8,7 @@ import { faStackOverflow } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
-import './Footer.scss';
+import '../scss/Footer.scss';
 
 const socialMedia = [
   {

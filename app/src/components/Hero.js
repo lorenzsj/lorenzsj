@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import SplitButton from 'react-bootstrap/SplitButton'
 import Jumbotron from 'react-bootstrap/Jumbotron';
 
-import './Hero.scss';
+import '../scss/Hero.scss';
 
 import macbook from '../img/macbook.png';
 
@@ -13,10 +13,10 @@ import macbook from '../img/macbook.png';
 function Hero() {
   return (
     <Jumbotron fluid className="mb-0 hero-bg">
-      <div className="container ">
+      <div className="container">
         <div className="d-flex row align-items-center">
-          <div className="col-lg-6 order-2 order-lg-1 hero-text-bg shadow">
-            <div>
+          <div className="col-lg-6 order-2 order-lg-1">
+            <div className="hero-text-bg shadow">
               <h1 className="d-flex justify-content-center justify-content-lg-start">Like What You See?</h1>
               {/* TODO: maybe centering the text looks better? not sure atm */}
               <p class="lead d-flex justify-content-center justify-content-lg-start">Proident eu nisi commodo enim deserunt enim duis sunt nostrud anim. Sunt do sit enim veniam nostrud culpa adipisicing do ullamco occaecat et. </p>

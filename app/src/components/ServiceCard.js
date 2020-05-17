@@ -2,7 +2,7 @@ import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import './ServiceCard.scss';
+import '../scss/ServiceCard.scss';
 
 function ServiceCard(props) {
   return (
