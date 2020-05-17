@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+root_dir="~/lorenzsj"
+session_name="work"
+
+cd root_dir
+
+tmux start-server
+
+tmux new-session -d -s $session_name
+
+# Split for top and bottom
+tmux splitw -v
+
+# Re-select the top pane
+tmux selectp -t 0
+
+# Split for side by side
+tmux splitw -h
+
+# Now in top-right pane, get ready to start django
+tmux send-keys "source env/bin/activate" C-m 
+tmux send-keys "cd lorenzsj/" C-m
+tmux send-keys "clear" C-m
+tmux send-keys "python manage.py runserver"
+
+tmux selectp -t 0
+
+# Go to top left pane, get ready to start react
+tmux send-keys "cd app" C-m
+tmux send-keys "clear" C-m
+tmux send-keys "npm start"
+
+# Go to the bottom pane and enter the root dir
+tmux selectp -t 2 
+tmux send-keys "cd lorenzsj" C-m
+tmux send-keys "clear" C-m
+
+tmux attach-session -t $session_name
